@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250">
+<defs><filter id="g2"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<style>
+.t{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:15px;fill:#e8f1fa}
+.s{font-family:'Fira Code',Consolas,Menlo,monospace;font-size:12px}
+.h{font-family:'Fira Code',Consolas,Menlo,monospace;font-size:14px;fill:#7f97ad}
+.flow{stroke-width:2.5;stroke-dasharray:6 8;animation:fl .8s linear infinite}
+@keyframes fl{to{stroke-dashoffset:-14}}
+.hl{opacity:0;animation:hl 3s ease-in-out infinite}
+@keyframes hl{0%,100%{opacity:0}8%{opacity:.18}20%{opacity:0}}
+</style>
+<rect width="1200" height="250" rx="18" fill="#0b1220"/>
+<text x="30" y="40" class="h">// inference pipeline — src/predict.py</text>
+<line x1="180.0" y1="125.0" x2="228.0" y2="125.0" class="flow" stroke="#36BCF7"/><line x1="378.0" y1="125.0" x2="426.0" y2="125.0" class="flow" stroke="#2EE6A6"/><line x1="576.0" y1="125.0" x2="624.0" y2="125.0" class="flow" stroke="#2EE6A6"/><line x1="774.0" y1="125.0" x2="822.0" y2="125.0" class="flow" stroke="#a78bfa"/><line x1="972.0" y1="125.0" x2="1020.0" y2="125.0" class="flow" stroke="#f7b733"/><g class="node" style="animation-delay:0.0s">
+<rect x="30.0" y="70" width="150" height="110" rx="14" fill="#111c2e" stroke="#36BCF7" stroke-width="1.6"/>
+<rect x="30.0" y="70" width="150" height="110" rx="14" fill="#36BCF7" class="hl" style="animation-delay:0.0s"/>
+<text x="105.0" y="112" text-anchor="middle" font-size="28">🏭</text>
+<text x="105.0" y="142" text-anchor="middle" class="t">IIoT Sensors</text>
+<text x="105.0" y="163" text-anchor="middle" class="s" fill="#36BCF7">5 readings</text></g><g class="node" style="animation-delay:0.5s">
+<rect x="228.0" y="70" width="150" height="110" rx="14" fill="#111c2e" stroke="#2EE6A6" stroke-width="1.6"/>
+<rect x="228.0" y="70" width="150" height="110" rx="14" fill="#2EE6A6" class="hl" style="animation-delay:0.5s"/>
+<text x="303.0" y="112" text-anchor="middle" font-size="28">🔐</text>
+<text x="303.0" y="142" text-anchor="middle" class="t">AES-256-CBC</text>
+<text x="303.0" y="163" text-anchor="middle" class="s" fill="#2EE6A6">encrypt · IV</text></g><g class="node" style="animation-delay:1.0s">
+<rect x="426.0" y="70" width="150" height="110" rx="14" fill="#111c2e" stroke="#2EE6A6" stroke-width="1.6"/>
+<rect x="426.0" y="70" width="150" height="110" rx="14" fill="#2EE6A6" class="hl" style="animation-delay:1.0s"/>
+<text x="501.0" y="112" text-anchor="middle" font-size="28">🔓</text>
+<text x="501.0" y="142" text-anchor="middle" class="t">Decrypt + Scale</text>
+<text x="501.0" y="163" text-anchor="middle" class="s" fill="#2EE6A6">StandardScaler</text></g><g class="node" style="animation-delay:1.5s">
+<rect x="624.0" y="70" width="150" height="110" rx="14" fill="#111c2e" stroke="#a78bfa" stroke-width="1.6"/>
+<rect x="624.0" y="70" width="150" height="110" rx="14" fill="#a78bfa" class="hl" style="animation-delay:1.5s"/>
+<text x="699.0" y="112" text-anchor="middle" font-size="28">🧠</text>
+<text x="699.0" y="142" text-anchor="middle" class="t">Autoencoder</text>
+<text x="699.0" y="163" text-anchor="middle" class="s" fill="#a78bfa">5→8→5</text></g><g class="node" style="animation-delay:2.0s">
+<rect x="822.0" y="70" width="150" height="110" rx="14" fill="#111c2e" stroke="#f7b733" stroke-width="1.6"/>
+<rect x="822.0" y="70" width="150" height="110" rx="14" fill="#f7b733" class="hl" style="animation-delay:2.0s"/>
+<text x="897.0" y="112" text-anchor="middle" font-size="28">📉</text>
+<text x="897.0" y="142" text-anchor="middle" class="t">Recon. Error</text>
+<text x="897.0" y="163" text-anchor="middle" class="s" fill="#f7b733">MSE vs τ₉₉</text></g><g class="node" style="animation-delay:2.5s">
+<rect x="1020.0" y="70" width="150" height="110" rx="14" fill="#111c2e" stroke="#ff6b9d" stroke-width="1.6"/>
+<rect x="1020.0" y="70" width="150" height="110" rx="14" fill="#ff6b9d" class="hl" style="animation-delay:2.5s"/>
+<text x="1095.0" y="112" text-anchor="middle" font-size="28">📡</text>
+<text x="1095.0" y="142" text-anchor="middle" class="t">Dashboard</text>
+<text x="1095.0" y="163" text-anchor="middle" class="s" fill="#ff6b9d">alert · log</text></g><circle r="5" fill="#ffffff" filter="url(#g2)"><animateMotion dur="3s" begin="0s" repeatCount="indefinite" path="M105.0,125.0 L1095.0,125.0"/>
+<animate attributeName="fill" values="#36BCF7;#2EE6A6;#a78bfa;#f7b733;#ff6b9d" dur="3s" begin="0s" repeatCount="indefinite"/></circle><circle r="5" fill="#ffffff" filter="url(#g2)"><animateMotion dur="3s" begin="1s" repeatCount="indefinite" path="M105.0,125.0 L1095.0,125.0"/>
+<animate attributeName="fill" values="#36BCF7;#2EE6A6;#a78bfa;#f7b733;#ff6b9d" dur="3s" begin="1s" repeatCount="indefinite"/></circle><circle r="5" fill="#ffffff" filter="url(#g2)"><animateMotion dur="3s" begin="2s" repeatCount="indefinite" path="M105.0,125.0 L1095.0,125.0"/>
+<animate attributeName="fill" values="#36BCF7;#2EE6A6;#a78bfa;#f7b733;#ff6b9d" dur="3s" begin="2s" repeatCount="indefinite"/></circle>
+<text x="1170" y="228" text-anchor="end" class="h">anomaly ⇔ reconstruction_error &gt; threshold</text>
+</svg>

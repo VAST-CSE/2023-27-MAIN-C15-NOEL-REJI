@@ -1,10 +1,10 @@
-<!-- ============================  HEADER  ============================ -->
+<!-- ================================  HERO  ================================ -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Intelligent%20IoT%20Anomaly%20Detection&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Autoencoder%20%E2%80%A2%20Federated%20Learning%20%E2%80%A2%20AES-256%20Security&descAlignY=56&descSize=18" width="100%" alt="header"/>
+<img src="assets/hero.svg" width="100%" alt="Intelligent IoT Anomaly Detection — animated sensor waveform with anomaly spike"/>
 
-<a href="#">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=36BCF7&center=true&vCenter=true&multiline=false&width=720&lines=Detecting+machine+failures+before+they+happen+%E2%9A%99%EF%B8%8F;Deep+Autoencoder+trained+on+5+IIoT+sensor+streams+%F0%9F%A7%A0;Privacy-preserving+Federated+Learning+across+factories+%F0%9F%8F%AD;AES-256+encrypted+sensor+pipeline+%F0%9F%94%90;Real-time+Streamlit+monitoring+dashboard+%F0%9F%93%A1" alt="Typing SVG"/>
+<a href="#-getting-started">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=800&color=36BCF7&center=true&vCenter=true&width=760&lines=Detecting+machine+failures+before+they+happen+%E2%9A%99%EF%B8%8F;Deep+Autoencoder+on+5+IIoT+sensor+streams+%F0%9F%A7%A0;Privacy-preserving+Federated+Learning+%F0%9F%8F%AD%F0%9F%8F%AD%F0%9F%8F%AD;AES-256+encrypted+sensor+pipeline+%F0%9F%94%90;Explainable+AI+with+SHAP+%F0%9F%94%8E;Real-time+Streamlit+control+room+%F0%9F%93%A1" alt="Typing SVG"/>
 </a>
 
 <br/>
@@ -18,74 +18,132 @@
 ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 ![AES-256](https://img.shields.io/badge/Security-AES--256--CBC-2EA44F?style=for-the-badge&logo=letsencrypt&logoColor=white)
 ![SHAP](https://img.shields.io/badge/XAI-SHAP-8A2BE2?style=for-the-badge)
+<br/>
+![Stars](https://img.shields.io/github/stars/rahulmj2004/intelligent-iot-anomaly-detection-v2?style=social)
+![Forks](https://img.shields.io/github/forks/rahulmj2004/intelligent-iot-anomaly-detection-v2?style=social)
+![Last commit](https://img.shields.io/github/last-commit/rahulmj2004/intelligent-iot-anomaly-detection-v2?style=flat-square&color=36BCF7)
+![Repo size](https://img.shields.io/github/repo-size/rahulmj2004/intelligent-iot-anomaly-detection-v2?style=flat-square&color=2EE6A6)
+
+<p>
+  <a href="#-overview">Overview</a> •
+  <a href="#-key-features">Features</a> •
+  <a href="#%EF%B8%8F-system-architecture">Architecture</a> •
+  <a href="#-results">Results</a> •
+  <a href="#-getting-started">Getting Started</a> •
+  <a href="#-authors">Authors</a>
+</p>
 
 </div>
 
----
-
-## 📖 Overview
-
-**Intelligent IoT Anomaly Detection** is an end-to-end Industrial IoT (IIoT) research platform that detects abnormal machine behaviour from live sensor readings. A **deep autoencoder** learns what "normal" looks like; anything it cannot reconstruct well is flagged as an **anomaly**.
-
-The system goes beyond a single model:
-
-- 🏭 **Federated Learning** — multiple factories collaboratively train one global model **without sharing raw data** (Flower + FedAvg).
-- 🔐 **AES-256 encryption** — every sensor payload is encrypted/decrypted in the inference pipeline to simulate secure IIoT transport.
-- 🧠 **Explainability** — SHAP highlights which sensor drove a given prediction.
-- 📡 **Interactive dashboard** — a Streamlit control room with live predictions, trend charts, history, analytics and model diagnostics.
-
-Built on the **[AI4I 2020 Predictive Maintenance Dataset](https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset)** (10,000 samples).
-
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
 
-## ✨ Key Features
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" width="34" align="center"/> Overview
+
+**Intelligent IoT Anomaly Detection** is an end-to-end Industrial IoT (IIoT) research platform that spots abnormal machine behaviour from live sensor readings. A **deep autoencoder** learns what *healthy* looks like. When it can't reconstruct a reading well, that reading is flagged as an **anomaly**.
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td>
 
-### 🧠 Deep Autoencoder
-Symmetric `5 → 32 → 16 → 8 → 16 → 32 → 5` network trained to reconstruct healthy sensor states. Reconstruction MSE above the **99th-percentile threshold** ⇒ anomaly.
-
-</td>
-<td width="50%" valign="top">
-
-### 🏭 Federated Learning
-Dataset split across **Factory A / B / C**. Each client trains locally; a Flower server aggregates weights with **FedAvg** over 5 rounds.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🔐 AES-256 Data Security
-Sensor readings are serialised, encrypted with **AES-256-CBC** (random IV per message), then decrypted before inference.
-
-</td>
-<td width="50%" valign="top">
-
-### 📊 Real-time Dashboard
-Gauges, live trend charts, machine-health score, prediction history with CSV export, analytics and model-performance graphs.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🔎 Explainable AI
-`src/explain.py` uses **SHAP KernelExplainer** to rank each sensor's contribution to the anomaly score.
-
-</td>
-<td width="50%" valign="top">
-
-### 📝 IEEE-style Evaluation
-Accuracy, Precision, Recall, F1, confusion matrix and full classification report on a stratified hold-out set.
+- 🏭 **Federated Learning**: factories train one global model together **without sharing raw data** (Flower + FedAvg).
+- 🔐 **AES-256 encryption**: every sensor payload goes through an encrypt → decrypt step to simulate secure IIoT transport.
+- 🔎 **Explainability**: SHAP shows which sensor drove a prediction.
+- 📡 **Interactive dashboard**: a Streamlit control room with live predictions, trends, history and diagnostics.
 
 </td>
 </tr>
 </table>
 
-## 🏗️ System Architecture
+Built on the **[AI4I 2020 Predictive Maintenance Dataset](https://archive.ics.uci.edu/dataset/601/ai4i+2020+predictive+maintenance+dataset)** (10,000 samples · 5 sensors).
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" width="34" align="center"/> Key Features
+
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Robot.png" width="56"/>
+
+### Deep Autoencoder
+Symmetric `5 → 32 → 16 → 8 → 16 → 32 → 5` network trained to reconstruct healthy sensor states. A reconstruction MSE above the **99th-percentile threshold** means an anomaly.
+
+</td>
+<td width="50%" valign="top" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Factory.png" width="56"/>
+
+### Federated Learning
+The dataset is split across **Factory A / B / C**. Each client trains locally, and a Flower server aggregates the weights with **FedAvg** over 5 rounds.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Locked.png" width="56"/>
+
+### AES-256 Data Security
+Sensor readings are serialised and encrypted with **AES-256-CBC** (a fresh random IV per message), then decrypted before inference.
+
+</td>
+<td width="50%" valign="top" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" width="56"/>
+
+### Real-time Dashboard
+Gauges, live trend charts, a machine-health score, prediction history with CSV export, analytics and model-performance graphs.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Magnifying%20Glass%20Tilted%20Left.png" width="56"/>
+
+### Explainable AI
+`src/explain.py` uses **SHAP KernelExplainer** to rank how much each sensor contributes to the anomaly score.
+
+</td>
+<td width="50%" valign="top" align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="56"/>
+
+### IEEE-style Evaluation
+Accuracy, Precision, Recall, F1, a confusion matrix and a full classification report on a stratified hold-out set.
+
+</td>
+</tr>
+</table>
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" width="34" align="center"/> System Architecture
+
+### 🔄 Inference Pipeline
+
+<div align="center">
+<img src="assets/pipeline.svg" width="100%" alt="Animated inference pipeline: sensors → AES encryption → decrypt & scale → autoencoder → reconstruction error → dashboard"/>
+</div>
+
+### 🌐 Federated Learning Topology
+
+<div align="center">
+<img src="assets/federated.svg" width="85%" alt="Animated federated learning: three factories exchange weights with a global FedAvg server"/>
+</div>
+
+> 🔒 Raw sensor data **never leaves** a factory. Only model weights are exchanged.
+
+### 🧬 Autoencoder Design
+
+```mermaid
+flowchart LR
+    I["Input<br/>5"] --> E1["Dense 32<br/>ReLU"] --> E2["Dense 16<br/>ReLU"] --> Z(("Latent<br/>8")) --> D1["Dense 16<br/>ReLU"] --> D2["Dense 32<br/>ReLU"] --> O["Output<br/>5"]
+    style Z fill:#2c5364,color:#fff,stroke:#36BCF7,stroke-width:3px
+```
+
+| Setting | Value |
+|---|---|
+| Loss | Mean Squared Error |
+| Optimizer | Adam |
+| Batch size | 256 (centralised) · 32 (federated) |
+| Anomaly threshold | 99th percentile of reconstruction error |
+| Split | 80 / 20 stratified on `Machine failure` |
+
+<details>
+<summary><b>📐 Detailed data-flow diagram (click to expand)</b></summary>
+<br/>
 
 ```mermaid
 flowchart LR
@@ -110,39 +168,25 @@ flowchart LR
     DB --> LOG[(📜 Prediction<br/>History CSV)]
 ```
 
-### 🌐 Federated Learning Topology
+</details>
 
-```mermaid
-flowchart TB
-    SRV["🖥️ Flower Server<br/>FedAvg · 5 rounds<br/>127.0.0.1:8080"]
-    A["🏭 Factory A<br/>3,333 samples"]
-    B["🏭 Factory B<br/>3,333 samples"]
-    C["🏭 Factory C<br/>3,334 samples"]
-    A <-- "local weights ⇄ global weights" --> SRV
-    B <-- "local weights ⇄ global weights" --> SRV
-    C <-- "local weights ⇄ global weights" --> SRV
-    SRV --> G[("💾 federated_autoencoder.keras")]
-```
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="34" align="center"/> Tech Stack
 
-> 🔒 Raw sensor data **never leaves** a factory — only model weights are exchanged.
+<div align="center">
 
-### 🧬 Autoencoder Design
+<img src="https://skillicons.dev/icons?i=py,tensorflow,sklearn,github,vscode&theme=dark" alt="tech stack"/>
 
-```mermaid
-flowchart LR
-    I["Input<br/>5"] --> E1["Dense 32<br/>ReLU"] --> E2["Dense 16<br/>ReLU"] --> Z(("Latent<br/>8")) --> D1["Dense 16<br/>ReLU"] --> D2["Dense 32<br/>ReLU"] --> O["Output<br/>5"]
-    style Z fill:#2c5364,color:#fff,stroke:#36BCF7,stroke-width:3px
-```
-
-| Setting | Value |
+| Layer | Tools |
 |---|---|
-| Loss | Mean Squared Error |
-| Optimizer | Adam |
-| Batch size | 256 (centralised) · 32 (federated) |
-| Anomaly threshold | 99th percentile of reconstruction error |
-| Split | 80 / 20 stratified on `Machine failure` |
+| 🧠 Modelling | TensorFlow / Keras · scikit-learn · NumPy · pandas |
+| 🏭 Federated | Flower (`flwr`) · FedAvg |
+| 🔐 Security | PyCryptodome (AES-256-CBC) |
+| 🔎 Explainability | SHAP |
+| 📡 Visualisation | Streamlit · Plotly · Matplotlib |
 
-## 📈 Results
+</div>
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="34" align="center"/> Results
 
 <div align="center">
 
@@ -170,10 +214,11 @@ flowchart LR
 
 </details>
 
-## 📁 Project Structure
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Card%20Index%20Dividers.png" width="34" align="center"/> Project Structure
 
 ```text
 intelligent-iot-anomaly-detection-v2/
+├── 📂 assets/                    # Animated README graphics
 ├── 📂 dashboard/
 │   └── app.py                    # Streamlit monitoring dashboard
 ├── 📂 data/
@@ -206,7 +251,7 @@ intelligent-iot-anomaly-detection-v2/
 └── requirements.txt
 ```
 
-## 🚀 Getting Started
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="34" align="center"/> Getting Started
 
 ### 1️⃣ Clone & install
 
@@ -223,7 +268,7 @@ pip install flwr matplotlib shap  # federated learning, plots & XAI extras
 
 ### 2️⃣ Launch the dashboard
 
-Pre-trained artefacts are included in `models/`, so you can start right away:
+The pre-trained model files are already in `models/`, so you can start right away:
 
 ```bash
 streamlit run dashboard/app.py
@@ -243,40 +288,41 @@ python test_model.py            # quick inference smoke test
 ```bash
 python src/split_dataset.py                       # create factory_A/B/C.csv
 
-# Terminal 1 — server
+# Terminal 1: server
 python src/federated/server.py
 
-# Terminals 2, 3, 4 — one client per factory
+# Terminals 2, 3, 4: one client per factory
 python src/federated/client.py --factory factory_A
 python src/federated/client.py --factory factory_B
 python src/federated/client.py --factory factory_C
 ```
 
-## 🖥️ Dashboard Tour
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Satellite%20Antenna.png" width="34" align="center"/> Dashboard Tour
 
 | Tab | What it shows |
 |---|---|
-| 🔍 **Live Prediction** | Enter 5 sensor values → anomaly verdict, reconstruction error, risk gauge, encrypted / IV / decrypted payload |
-| 📡 **Live Dashboard** | Rolling sensor trends and machine-health gauge |
+| 🔍 **Live Prediction** | Enter 5 sensor values to get an anomaly verdict, reconstruction error, risk gauge, and the encrypted / IV / decrypted payload |
+| 📡 **Live Dashboard** | Rolling sensor trends and a machine-health gauge |
 | 📜 **History** | Every prediction, timestamped, with CSV download |
 | 📊 **Analytics** | Normal vs. anomaly breakdown and error statistics |
 | 🧠 **Model Performance** | Training loss & reconstruction-error graphs |
 | 📂 **Feature Distribution** | Per-sensor distribution plots |
 
-## 📊 Dataset
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" width="34" align="center"/> Dataset
 
 | Feature | Unit | Description |
 |---|---|---|
-| Air temperature | K | Ambient air temperature |
-| Process temperature | K | Machine process temperature |
-| Rotational speed | rpm | Spindle speed |
-| Torque | Nm | Applied torque |
-| Tool wear | min | Cumulative tool usage |
-| **Machine failure** | 0 / 1 | Ground-truth label (used only for evaluation) |
+| 🌡️ Air temperature | K | Ambient air temperature |
+| 🔥 Process temperature | K | Machine process temperature |
+| ⚙️ Rotational speed | rpm | Spindle speed |
+| 🔩 Torque | Nm | Applied torque |
+| 🛠️ Tool wear | min | Cumulative tool usage |
+| 🎯 **Machine failure** | 0 / 1 | Ground-truth label (used only for evaluation) |
 
-## 🛡️ Security Note
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Shield.png" width="34" align="center"/> Security Note
 
-`src/encryption.py` ships with a **hard-coded demo key** for reproducibility. For any real deployment, load the AES key from an environment variable or a secrets manager and never commit it to source control.
+> [!WARNING]
+> `src/encryption.py` ships with a **hard-coded demo key** so results are reproducible. For any real deployment, load the AES key from an environment variable or a secrets manager, and never commit it to source control.
 
 ## 🗺️ Roadmap
 
@@ -289,7 +335,7 @@ python src/federated/client.py --factory factory_C
 - [ ] Secure aggregation & differential privacy for FL
 - [ ] Docker deployment
 
-## 🤝 Contributing
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="34" align="center"/> Contributing
 
 Contributions, issues and feature requests are welcome!
 
@@ -298,19 +344,33 @@ Contributions, issues and feature requests are welcome!
 3. Commit your changes: `git commit -m "Add amazing feature"`
 4. Push the branch and open a Pull Request
 
-## 👥 Authors
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Busts%20in%20Silhouette.png" width="34" align="center"/> Authors
 
 <div align="center">
 
 <table>
 <tr>
-<td align="center" width="200"><b>Rahul M J</b><br/><br/><a href="https://github.com/rahulmj2004"><img src="https://img.shields.io/badge/GitHub-rahulmj2004-181717?style=flat-square&logo=github"/></a></td>
-<td align="center" width="200"><b>Noel Reji</b><br/><br/><a href="https://github.com/Noel-Reji"><img src="https://img.shields.io/badge/GitHub-Noel--Reji-181717?style=flat-square&logo=github"/></a></td>
-<td align="center" width="200"><b>Rasin John</b><br/><br/><a href="https://github.com/Rasinjohn4444"><img src="https://img.shields.io/badge/GitHub-Rasinjohn4444-181717?style=flat-square&logo=github"/></a></td>
+<td align="center" width="200">
+<a href="https://github.com/rahulmj2004"><img src="https://github.com/rahulmj2004.png?size=120" width="100" style="border-radius:50%" alt="Rahul M J"/></a><br/>
+<b>Rahul M J</b><br/><br/>
+<a href="https://github.com/rahulmj2004"><img src="https://img.shields.io/badge/GitHub-rahulmj2004-181717?style=flat-square&logo=github"/></a>
+</td>
+<td align="center" width="200">
+<a href="https://github.com/Noel-Reji"><img src="https://github.com/Noel-Reji.png?size=120" width="100" style="border-radius:50%" alt="Noel Reji"/></a><br/>
+<b>Noel Reji</b><br/><br/>
+<a href="https://github.com/Noel-Reji"><img src="https://img.shields.io/badge/GitHub-Noel--Reji-181717?style=flat-square&logo=github"/></a>
+</td>
+<td align="center" width="200">
+<a href="https://github.com/Rasinjohn4444"><img src="https://github.com/Rasinjohn4444.png?size=120" width="100" style="border-radius:50%" alt="Rasin John"/></a><br/>
+<b>Rasin John</b><br/><br/>
+<a href="https://github.com/Rasinjohn4444"><img src="https://img.shields.io/badge/GitHub-Rasinjohn4444-181717?style=flat-square&logo=github"/></a>
+</td>
 </tr>
 </table>
 
-⭐ **If you found this project useful, consider giving it a star!** ⭐
+<br/>
+
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" width="28" align="center"/> **If you found this project useful, consider giving it a star!** <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" width="28" align="center"/>
 
 </div>
 

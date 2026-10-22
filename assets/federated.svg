@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480">
+<defs><filter id="g3"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<radialGradient id="sv"><stop offset="0" stop-color="#36BCF7" stop-opacity=".35"/><stop offset="1" stop-color="#36BCF7" stop-opacity="0"/></radialGradient></defs>
+<style>
+.t{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:16px;fill:#e8f1fa}
+.s{font-family:'Fira Code',Consolas,Menlo,monospace;font-size:12px}
+.h{font-family:'Fira Code',Consolas,Menlo,monospace;font-size:14px;fill:#7f97ad}
+.pk{font-family:'Fira Code',Consolas,Menlo,monospace;font-size:13px;font-weight:700}
+.rd{font-family:'Fira Code',Consolas,Menlo,monospace;font-size:14px;fill:#f7b733;font-weight:700;letter-spacing:2px}
+.ln{stroke:#36BCF7;stroke-opacity:.35;stroke-width:2;stroke-dasharray:4 6;animation:fl 1s linear infinite}
+@keyframes fl{to{stroke-dashoffset:-10}}
+.pulse{transform-origin:500.0px 110px;animation:pu 2s ease-out infinite}
+@keyframes pu{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.8);opacity:0}}
+</style>
+<rect width="1000" height="480" rx="18" fill="#0b1220"/>
+<text x="30" y="40" class="h">// federated learning — Flower · FedAvg</text>
+<line x1="500.0" y1="110" x2="170" y2="340" class="ln"/><line x1="500.0" y1="110" x2="500" y2="360" class="ln"/><line x1="500.0" y1="110" x2="830" y2="340" class="ln"/>
+<circle cx="500.0" cy="110" r="70" fill="url(#sv)"/>
+<circle class="pulse" cx="500.0" cy="110" r="48" fill="none" stroke="#36BCF7" stroke-width="2"/>
+<rect x="390.0" y="72" width="220" height="76" rx="16" fill="#111c2e" stroke="#36BCF7" stroke-width="2"/>
+<text x="412.0" y="119" font-size="28">🖥️</text>
+<text x="452.0" y="106" class="t">Global Server</text>
+<text x="452.0" y="128" class="s" fill="#36BCF7">FedAvg aggregation</text>
+<text x="630.0" y="115" class="rd" opacity="0">ROUND 1/5<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.05;.95;1" dur="4s" begin="0s;r1.end+16s" id="r1"/></text><text x="630.0" y="115" class="rd" opacity="0">ROUND 2/5<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.05;.95;1" dur="4s" begin="4s;r2.end+16s" id="r2"/></text><text x="630.0" y="115" class="rd" opacity="0">ROUND 3/5<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.05;.95;1" dur="4s" begin="8s;r3.end+16s" id="r3"/></text><text x="630.0" y="115" class="rd" opacity="0">ROUND 4/5<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.05;.95;1" dur="4s" begin="12s;r4.end+16s" id="r4"/></text><text x="630.0" y="115" class="rd" opacity="0">ROUND 5/5<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.05;.95;1" dur="4s" begin="16s;r5.end+16s" id="r5"/></text>
+<g opacity="0"><circle r="7" fill="#f7b733" filter="url(#g3)"/><text y="-12" text-anchor="middle" class="pk" fill="#f7b733">Δw</text>
+<animateMotion dur="4s" begin="0.0s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.45;1" calcMode="linear" path="M170,340 L500.0,110"/>
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.45;.46;1" dur="4s" begin="0.0s" repeatCount="indefinite"/></g>
+<g opacity="0"><circle r="7" fill="#36BCF7" filter="url(#g3)"/><text y="-12" text-anchor="middle" class="pk" fill="#36BCF7">W</text>
+<animateMotion dur="4s" begin="0.0s" repeatCount="indefinite" keyPoints="0;0;1" keyTimes="0;.55;1" calcMode="linear" path="M500.0,110 L170,340"/>
+<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.54;.55;1" dur="4s" begin="0.0s" repeatCount="indefinite"/></g><g opacity="0"><circle r="7" fill="#f7b733" filter="url(#g3)"/><text y="-12" text-anchor="middle" class="pk" fill="#f7b733">Δw</text>
+<animateMotion dur="4s" begin="0.25s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.45;1" calcMode="linear" path="M500,360 L500.0,110"/>
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.45;.46;1" dur="4s" begin="0.25s" repeatCount="indefinite"/></g>
+<g opacity="0"><circle r="7" fill="#36BCF7" filter="url(#g3)"/><text y="-12" text-anchor="middle" class="pk" fill="#36BCF7">W</text>
+<animateMotion dur="4s" begin="0.25s" repeatCount="indefinite" keyPoints="0;0;1" keyTimes="0;.55;1" calcMode="linear" path="M500.0,110 L500,360"/>
+<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.54;.55;1" dur="4s" begin="0.25s" repeatCount="indefinite"/></g><g opacity="0"><circle r="7" fill="#f7b733" filter="url(#g3)"/><text y="-12" text-anchor="middle" class="pk" fill="#f7b733">Δw</text>
+<animateMotion dur="4s" begin="0.5s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.45;1" calcMode="linear" path="M830,340 L500.0,110"/>
+<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.45;.46;1" dur="4s" begin="0.5s" repeatCount="indefinite"/></g>
+<g opacity="0"><circle r="7" fill="#36BCF7" filter="url(#g3)"/><text y="-12" text-anchor="middle" class="pk" fill="#36BCF7">W</text>
+<animateMotion dur="4s" begin="0.5s" repeatCount="indefinite" keyPoints="0;0;1" keyTimes="0;.55;1" calcMode="linear" path="M500.0,110 L830,340"/>
+<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;.54;.55;1" dur="4s" begin="0.5s" repeatCount="indefinite"/></g><g><rect x="85" y="330" width="170" height="70" rx="14" fill="#111c2e" stroke="#2EE6A6" stroke-width="1.6"/>
+<text x="112" y="374" font-size="26">🏭</text>
+<text x="148" y="360" class="t">Factory A</text>
+<text x="148" y="382" class="s" fill="#2EE6A6">3,333 samples</text>
+<circle cx="238" cy="344" r="4" fill="#2EE6A6"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" begin="0.0s" repeatCount="indefinite"/></circle></g><g><rect x="415" y="350" width="170" height="70" rx="14" fill="#111c2e" stroke="#2EE6A6" stroke-width="1.6"/>
+<text x="442" y="394" font-size="26">🏭</text>
+<text x="478" y="380" class="t">Factory B</text>
+<text x="478" y="402" class="s" fill="#2EE6A6">3,333 samples</text>
+<circle cx="568" cy="364" r="4" fill="#2EE6A6"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" begin="0.3s" repeatCount="indefinite"/></circle></g><g><rect x="745" y="330" width="170" height="70" rx="14" fill="#111c2e" stroke="#2EE6A6" stroke-width="1.6"/>
+<text x="772" y="374" font-size="26">🏭</text>
+<text x="808" y="360" class="t">Factory C</text>
+<text x="808" y="382" class="s" fill="#2EE6A6">3,334 samples</text>
+<circle cx="898" cy="344" r="4" fill="#2EE6A6"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" begin="0.6s" repeatCount="indefinite"/></circle></g>
+<text x="30" y="460" class="h"><tspan fill="#f7b733">● Δw</tspan> local updates   <tspan fill="#36BCF7">● W</tspan> global model   🔒 raw data never leaves the factory</text>
+</svg>
