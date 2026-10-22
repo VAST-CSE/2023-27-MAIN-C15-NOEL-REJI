@@ -298,13 +298,17 @@ Contributions, issues and feature requests are welcome!
 3. Commit your changes: `git commit -m "Add amazing feature"`
 4. Push the branch and open a Pull Request
 
-## 👤 Author
+## 👥 Authors
 
 <div align="center">
 
-**Rahul M J**
-
-[![GitHub](https://img.shields.io/badge/GitHub-rahulmj2004-181717?style=for-the-badge&logo=github)](https://github.com/rahulmj2004)
+<table>
+<tr>
+<td align="center" width="200"><b>Rahul M J</b><br/><br/><a href="https://github.com/rahulmj2004"><img src="https://img.shields.io/badge/GitHub-rahulmj2004-181717?style=flat-square&logo=github"/></a></td>
+<td align="center" width="200"><b>Noel Reji</b></td>
+<td align="center" width="200"><b>Rasin John</b></td>
+</tr>
+</table>
 
 ⭐ **If you found this project useful, consider giving it a star!** ⭐
 
